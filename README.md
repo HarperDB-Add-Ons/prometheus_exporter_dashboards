@@ -8,15 +8,15 @@ All dashboards in this collection require:
 - A Grafana installation with the Prometheus data source configured.
 
 ## Importing Dashboards
-These dashboards require selecting your Prometheus datasource as part of the import. Each For detailed instructions, visit the [Grafana Import Dashboards documentation](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/import-dashboards/).
+These dashboards require selecting your Prometheus datasource as part of the import. For detailed instructions, visit the [Grafana Import Dashboards documentation](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/import-dashboards/).
 
 ## Dashboards
 ### HarperDB Monitoring Dashboard
 [`harperdb_monitoring_dashboard.json`](./harperdb_monitoring_dashboard.json)
 
-This dashboard displays primary data associated with a standard HarperDB install. Variables are parameterized at the top of the dashboard giving configuratble options for:
+This dashboard displays primary data associated with a standard HarperDB install. Variables are parameterized at the top of the dashboard giving configurable options for:
 - Prometheus Job(s)
-  - The priamry grouping of data sources. An example of where you may have mutliple of these is in the case of multiple deployments (prod/ stage/dev and/or regional clusters).
+  - The primary grouping of data sources. An example of where you may have multiple of these is in the case of multiple deployments (prod/ stage/dev and/or regional clusters).
 - Instance(s)
   - The available instances(s) that data will be sourced from filtered by the selected job(s).
 - Quantile(s)
