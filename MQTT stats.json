@@ -530,7 +530,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -629,7 +630,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -907,7 +909,7 @@
           "type": "prometheus",
           "uid": "${DS_PROMETHEUS}"
         },
-        "definition": "label_values({topic=\"$Topic\"},topic)",
+        "definition": "label_values({job=~\"$jobs\"},topic)",
         "hide": 1,
         "includeAll": true,
         "label": "Topic(s)",
@@ -916,7 +918,7 @@
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values({topic=\"$Topic\"},topic)",
+          "query": "label_values({job=~\"$jobs\"},topic)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -935,6 +937,6 @@
   "timezone": "utc",
   "title": "MQTT stats",
   "uid": "adnzv4csjjdvka",
-  "version": 5,
+  "version": 6,
   "weekStart": ""
 }
